@@ -1,0 +1,10 @@
+.DS_Store
+*.bin
+*.pth
+*.pkl
+*.csv
+*.txt
+results/
+*.pt
+*.pyc
+src/model-best/
