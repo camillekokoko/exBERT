@@ -47,57 +47,36 @@ The purpose of this project is to build a system utilizing Natural Language Proc
 3. Data processing/transformation scripts are being kept [here](Repo folder containing data processing scripts/notebooks)
 4. Command Scripts are being kept [here]()
 
-## Pre-train an exBERT model 
+## Option 1: Run command script
 In command line:
 
-    python train.py \
-    -task ext -mode train \
-    -bert_data_path ../bert_data/ \
-    -ext_dropout 0.1 \
-    -model_path ../models/bertbase \
-    -lr 2e-3 \
-    -visible_gpus 0 \
-    -report_every 1000 \
-    -save_checkpoint_steps 1000 \
-    -batch_size 32 \
-    -train_steps 1000 \
-    -accum_count 2 \
-    -log_file ../logs/ext_bertbaseCs2.log \
-    -use_interval true \
-    -warmup_steps 10000 \
-    -max_pos 512 \
-    -exbert True \
-    -finetune False \
-    -config2 ./bert_config_ex_s2.json \
-    -checkpoint_path ./models_Presumm/Cs2_Best_stat_dic_exBERTe2_b32_lr0.0001.pth
+    ./scripts/command_c/auto_run_Cs1_e2_b32_lr1e3.sh ;
+    ./scripts/command_c/auto_run_Cs1_e2_b32_lr1e4.sh ;
+    ./scripts/command_c/auto_run_Cs1_e2_b32_lr1e5.sh ;
+    ./scripts/command_c/auto_run_Cs1_e2_b32_lr1e6.sh ;
 
-## Validation/Test an exBERT model 
+## Option 2: Pre-train an exBERT model 
 In command line:
 
-    python train.py \
-     -task ext \
-     -mode test \
-     -batch_size 32 \
-     -test_batch_size 32 \
-     -bert_data_path ../bert_data_story_files/ \
-     -model_path ../models/bertbase \
-     -test_from ../models/bertbase/bert_config_ex_Cs2.json_0.002_32_exbert_model_step_1000.pt
-     -log_file ../logs/test_ext_bertbaseCs2_testtest.log \
-     -result_path ../results/ext_bertbase \
-     -sep_optim true \
-     -use_interval true \
-     -visible_gpus -1 \
-     -max_pos 512 \
-     -max_length 128 \
-     -alpha 0.95 \
-     -min_length 50 \
-     -finetune_bert True \
-     -exbert True \
-     -config2 ./bert_config_ex_s2.json 
-
+    python Pretraining.py \
+      -e 1 \
+      -b 16 \
+      -sp ./results/checkpoint\
+      -dv -1 \
+      -lr 1e-04 \
+      -str exBERT \
+      -config ./config/bert_config.json ./config/bert_config_ex_s3.json \
+      -vocab ./data/interim/custom_bert_vocab.txt \
+      -pm_p ./config/pytorch_model.bin \
+      -dp ./data/interim/custom_bert_data_open.pkl \
+      -ls 128 \
+      -wp 0.5 \
+      -t_ex_only "" \
+      -train_p 736 \
+      -val_p 352
 
 ## Reference
 
-**[exBERT: Extending Pre-trained Models with Domain-specific Vocabulary Under Constrained Training Resources](https://aclanthology.org/2020.findings-emnlp.129) (Tai et al., Findings 2020)
-**[github](https://github.com/cgmhaicenter/exBERT))(@slackHandle)**
+**[exBERT: Extending Pre-trained Models with Domain-specific Vocabulary Under Constrained Training Resources](https://aclanthology.org/2020.findings-emnlp.129) 
+**[github repo](https://github.com/cgmhaicenter/exBERT)**
 
