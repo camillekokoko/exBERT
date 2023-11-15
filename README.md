@@ -2,7 +2,7 @@
 
 This project is a part of the Master of AI and Machine Learning Research.  Other projects can be found at the [main GitHub repo](https://github.com/camillekokoko/exBERTSum). Presentation can be found at the [youtube link](https://www.youtube.com/watch?v=6KChrujZ3_4)
 
-#### -- Project Status: [Active, On-Hold, Completed]
+#### -- Project Status: Active [Active, On-Hold, Completed]
 
 ## Project Intro/Objective
 The purpose of this project is to build a system utilizing Natural Language Processing (NLP) to generate informative summaries from community's directories in South Australia, accompanied by machine-readable cataloging in adherence to the MARC standard's description notes (Library of Congress 2023).
