@@ -28,7 +28,7 @@ The purpose of this project is to build a system utilizing Natural Language Proc
 * JSON
 * etc. 
 
-## Project Description
+## Project Description (to be completed)
 (Provide more detailed overview of the project.  Talk a bit about your data sources and what questions and hypothesis you are exploring. What specific data analysis/visualization and modelling work are you using to solve the problem? What blockers and challenges are you facing?  Feel free to number or bullet point things here)
 
 ## Needs of this project
@@ -78,5 +78,6 @@ In command line:
 ## Reference
 
 **[exBERT: Extending Pre-trained Models with Domain-specific Vocabulary Under Constrained Training Resources](https://aclanthology.org/2020.findings-emnlp.129) 
+
 **[github repo](https://github.com/cgmhaicenter/exBERT)**
 
