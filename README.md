@@ -74,6 +74,7 @@ In command line:
       -t_ex_only "" \
       -train_p 736 \
       -val_p 352
+see [AWS_EC2_Docker](https://github.com/camillekokoko/AWS_EC2_Docker) for deployment
 
 ## Reference
 
