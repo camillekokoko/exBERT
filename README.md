@@ -82,15 +82,4 @@ see [AWS_EC2_Docker](https://github.com/camillekokoko/AWS_EC2_Docker) for deploy
 
 **[github repo](https://github.com/cgmhaicenter/exBERT)**
 
-<<<<<<< HEAD
-#summarization
-|Models | Rouge-1 | Rouge-2 | Rouge-L |
-|-------|---------|---------|---------|
-|Bert Ext  | 40      | 40      | 40      |
-|exBert Open Ext| 40      | 40      | 40      |
-|exBert Combined Ext | 40      | 40      | 40      |
-# nlp-summarization-exbert
-# nlp-summarization-exbert
-=======
->>>>>>> bd59a987d90f242a5442acf0e8fcd1727ed66a88
-# nlp-summarization-exbert
+
